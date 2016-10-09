@@ -16,12 +16,12 @@ The distributed operation layer (DOL) is a software development framework to pro
 本次实验配置在VMware下ubuntu14.04虚拟机进行。
 
 1. 安装必要的工具和环境  
-   ```sh
-   $ sudo apt-get update
-   $ sudo apt-get install ant
-   $ sudo apt-get install openjdk-7-jdk
-   $ sudo apt-get install unzip
-   ```
+```sh
+$ sudo apt-get update
+$ sudo apt-get install ant
+$ sudo apt-get install openjdk-7-jdk
+$ sudo apt-get install unzip
+```
 2. 解压文件  
    - 在存放`dol_ehz.zip`和`systemc-2.3.1.tgz`的路径下,新建`dol`文件夹  
    ```sh
@@ -64,8 +64,8 @@ The distributed operation layer (DOL) is a software development framework to pro
    ```sh
    $ pwd
    ```
-   ![fig3](image/fig3.png)  
-   如图,这里显示`systemc`所在路径为`/home/womo/systemc-2.3.1`
+    	![fig3](image/fig3.png)  
+    	如图,这里显示`systemc`所在路径为`/home/womo/systemc-2.3.1`
 4. 编译DOL
    - 进入`dol`文件夹  
    ```sh
@@ -92,7 +92,7 @@ The distributed operation layer (DOL) is a software development framework to pro
    $ ant -f runexample.xml -Dnumber=1
    ```
    - 成功结果如图:  
-   ![fig4](image/fig4.png)
+     ![fig4](image/fig4.png)
 ---
 
 ## Experimental experience
