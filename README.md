@@ -78,8 +78,9 @@ $ sudo apt-get install unzip
    <property name="systemc.inc" value="YYY/include"/>
    <property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>
    ```
-   把`YYY`改成systemc所在路径,也就是`/home/womo/systemc-2.3.1`  
-   > **注意:**对于64位系统的机器,`lib-linux要`改成`lib-linux64`.  
+     把`YYY`改成systemc所在路径,也就是`/home/womo/systemc-2.3.1`  
+     > **注意:**对于64位系统的机器,`lib-linux要`改成`lib-linux64`.  
+
    - 编译,若成功会显示`build successful`.  
    ```bash
    $ ant -f build_zip.xml
