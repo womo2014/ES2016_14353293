@@ -100,4 +100,4 @@ $ ant -f runexample.xml -Dnumber=1
 
 ## Experimental experience
 
-本次实验做的过程中基本没遇到什么问题, TA给的ppt讲解的很详细. 使用了MarkDown编辑器`Typora`, 所见计所得, 体验很不错!
+本次实验做的过程中基本没遇到什么问题, TA给的ppt讲解的很详细. 使用了MarkDown编辑器`Typora`, 所见即所得, 体验很不错!
