@@ -82,7 +82,7 @@
 
 显然程序就是在第三种情况下发生了死锁.
 
- ![deadlock_fig2](image\deadlock_fig2.png)  
+ ![deadlock_fig2](../image/deadlock_fig2.png)  
 
 
 
