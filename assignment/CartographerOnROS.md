@@ -1,10 +1,73 @@
-# 配置cartographer
+# ROS下配置cartographer
+
+
+
+## 配置ROS
+
+本次实验配置在**Ubuntu 16.04 64位**环境下进行,安装**ROS Kinetic**.
+
+### 配置Ubuntu源
+
+进入系统设置`System Settings`->`Software & Updates`,勾选 `restricted`, `universe` 和`multiverse`.  
+
+![ros_fig1](../image/ros_fig1.png)  
+
+### 配置source.list
+
+让ubuntu允许来自packages.ros.org的软件包.
+
+```bash
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+```
+
+### 配置秘钥
+
+```bash
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
+```
+
+### 安装
+
+ROS有许多不同的库以及工具,这里选择安装`Desktop-Full`
+
+```bash
+sudo apt-get update # 更新Debian package的索引,确保索引是最新的
+sudo apt-get install ros-kinetic-desktop-full
+```
+
+### 初始化rosdep
+
+使用ROS之前,需要出示话`rosdep`, 当我们在编译或者运行某些ROS的组件时,`rosdep`能够使得系统依赖的安装更为容易.  
+
+```bash
+sudo rosdep init
+rosdep update
+```
+
+### 环境配置
+
+每次启动shell时都把ROS的环境变量加入到会话中
+
+```bash
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### 安装rosinstall工具
+
+```bash
+sudo apt-get install python-rosinstall
+```
+
+
 
 ---
 
+## 配置cartographer
+
 本次ROS下安装cartographer是在Ubuntu16.04 64位下进行的,在此之前已经安装好了**ROS Kinetic**.
 
-## 编译和安装
+### 编译和安装
 
 谷歌官方推荐使用工具[wstool](http://wiki.ros.org/wstool)和[rosdep](http://wiki.ros.org/rosdep),编译工具推荐使用[Ninja](https://ninja-build.org/).
 
@@ -47,7 +110,7 @@
    rospack profile # 如果运行时出现其他提示,可以选择再运行一次, 加上参数--zombie-only
    ```
 
-## 运行demo
+### 运行demo
 
 安装好cartographer后就可以下载谷歌官方提供的测试数据(包括2D和3D)来运行了.
 
@@ -92,7 +155,7 @@
 
 ---
 
-## 关于Ubuntu下翻墙
+### 关于Ubuntu下翻墙
 
 本次实验配置在最后的`catkin_make_isolated`编译时需要从谷歌下载代码,在墙内环境下如果不翻墙的话会出下**fail**.这里使用shadowsocks翻墙.  
 
@@ -116,6 +179,11 @@
 
 > **注意**: 配置完代理后,终端要重启后代理才会生效.
 
-**参考链接**:
+
+
+**参考链接:**
+
+- [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+
 - [Cartographer ROS Integration(谷歌官方安装文档)](https://google-cartographer-ros.readthedocs.io/en/latest/)
 - [shadowsock-qt5文档](https://github.com/shadowsocks/shadowsocks-qt5/wiki)  
