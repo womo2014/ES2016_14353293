@@ -184,6 +184,5 @@ sudo apt-get install python-rosinstall
 **参考链接:**
 
 - [Ubuntu install of ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
-
 - [Cartographer ROS Integration(谷歌官方安装文档)](https://google-cartographer-ros.readthedocs.io/en/latest/)
 - [shadowsock-qt5文档](https://github.com/shadowsocks/shadowsocks-qt5/wiki)  
